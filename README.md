@@ -10,6 +10,7 @@ This is the new Galleries Module for PyroCMS, it's easy to use and well integrat
 
 ### Translators
 1. Christian Giupponi (Italian and English)
+2. Marco Grueter (German)
 
 ### How to install
 Just Download and unzip the archive.  
