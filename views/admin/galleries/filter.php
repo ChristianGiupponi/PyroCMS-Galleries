@@ -32,7 +32,7 @@
 
 				?>
 					<tr>
-						<td><img src="<?php echo base_url('files/thumb/'.$cover); ?>" alt=""></td>
+						<td><img src="<?php echo site_url('files/thumb/'.$cover); ?>" alt=""></td>
 						<td><?php echo $name; ?></td>
 						<td><?php echo ( $category != ""	 ) ? $category : "N/D"; ?></td>
 						<td><?php echo ( $comments == "yes"	 ) ? lang('global:yes') : lang('global:no'); ?></td>

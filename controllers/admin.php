@@ -243,7 +243,7 @@ class Admin extends Admin_Controller
 			{
 				$selected = "";
 				
-				$url    = base_url().'files/thumb/'.$img->id;
+				$url    = site_url('files/thumb/'.$img->id);
 				$id     = $img->id;
 				$name   = $img->name;
 				

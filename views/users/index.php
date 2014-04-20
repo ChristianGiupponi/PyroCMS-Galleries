@@ -12,8 +12,8 @@
 			//	To see the option avaiable use:
 			//  var_dump($gallery);
 ?>			
-			<h1><a href="<?php echo base_url("galleries/show/".$slug); ?>"> <?php echo $name; ?></a></h1>
-			<p><img src="<?php echo base_url("files/thumb/".$image); ?>"></p>
+			<h1><a href="<?php echo site_url("galleries/show/".$slug); ?>"> <?php echo $name; ?></a></h1>
+			<p><img src="<?php echo site_url("files/thumb/".$image); ?>"></p>
 			<p><?php echo $intro; ?></p>
 <?php
 		}
