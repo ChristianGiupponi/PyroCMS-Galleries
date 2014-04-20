@@ -5,7 +5,7 @@
 		$slug 	= $g['galleries_slug'];
 		$text 	= $g['galleries_description'];
 		
-		$comments = $g['galleries_comments_enabled'];
+		$comments = $g['galleries_comments_enabled']['key'];
 		
 
 		
@@ -33,11 +33,9 @@
 					<?php echo $this->comments->display() ?>
 				</div>
 			
-				<?php if ($form_display): ?>
+				
 					<?php echo $this->comments->form() ?>
-				<?php else: ?>
-				<?php echo sprintf(lang('blog:disabled_after'), strtolower(lang('global:duration:'.str_replace(' ', '-', $post[0]['comments_enabled'])))) ?>
-				<?php endif ?>
+				
 			</div>
 <?php			
 		}

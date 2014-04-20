@@ -88,10 +88,32 @@ class Galleries extends Public_Controller
 				$keywords		= ( $g['galleries_seo_keywords'] 	!= "" ) ? $g['galleries_seo_keywords'] 		: $g['galleries_name'];
 				
 				$folder_id 		= $g['galleries_folder'];
+				
+				$comments = $g['galleries_comments_enabled']['key'];
+				
+				$id = $g['id'];
 			}
 			
 			//Get all the images
 			$images = $this->galleries_m->get_images_by_folder_id($folder_id);
+					
+			//We need coments?
+			if( $comments == "yes" )
+			{
+			
+				// We need to check if the comments are disabled in admin
+				if (Settings::get('enable_comments'))
+				{
+					// Load Comments so we can work out what to do with them
+					$this->load->library('comments/comments', array(
+						'entry_id'    => $id,
+						'entry_title' => $title,
+						'module'      => 'galleries',
+						'singular'    => 'gallery',
+						'plural'      => 'galleries',
+					));		
+				}
+			}
 			
 			//Render the UI
 			$this->template
