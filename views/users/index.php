@@ -11,10 +11,11 @@
 			
 			//	To see the option avaiable use:
 			//  var_dump($gallery);
-			
-			echo "<h1><a href=\"".base_url()."galleries/show/$slug\">$name</a></h1>";
-			echo "<p><img src=\"".base_url()."files/thumb/$image\"></p>";
-			echo "<p>$intro</p>";
+?>			
+			<h1><a href="<?php echo base_url("galleries/show/".$slug); ?>"> <?php echo $name; ?></a></h1>
+			<p><img src="<?php echo base_url("files/thumb/".$image); ?>"></p>
+			<p><?php echo $intro; ?></p>
+<?php
 		}
 	}
 	else
