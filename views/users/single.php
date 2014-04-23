@@ -16,7 +16,7 @@
 		{
 			foreach( $images as $image )
 			{
-				echo "<img src='".site_url('files/thumb/'.$image->id)."'>";
+				echo "<img src='".site_url('files/thumb/'.$image->id)."' alt='".$image->name."'>";
 			}
 		}
 		else
