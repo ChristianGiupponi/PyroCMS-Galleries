@@ -12,6 +12,13 @@ This is the new Galleries Module for PyroCMS, it's easy to use and well integrat
 1. Christian Giupponi (Italian and English)
 2. Marco Grueter (German)
 
+
+### How it works
+This module is well integrated with Files module and built on Streams API so you can easly add all the fields you need.  
+Basically this module create for you a Main folder in the Files module in which place all your galleries, just remember that **1 folder is 1 gallery**.  
+The module provide you the possibility to add category to the gallery and give you a built in interface to manage the SEO for each gallery so you can have all the control you need over the SEO functionality.
+
+
 ### How to install
 Just Download and unzip the archive.  
 Place the downloaded folder in the **addons/shared_addons/modules** fodler and make sure it is named as **galleries**.  
