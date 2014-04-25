@@ -29,6 +29,9 @@ Log in to the admin area of PyroCMS and install the module as usual.
 NB:  
 This module works only in the shared_addons folder.
 
+### Compatibility
+This module has been tested on 2.2.x branch, is not compatibile with the 2.3 (I will update it as soon as I can) and I'm not sure that works in the old PyroCMS version
+
 ### How to contribute
 If you want to contribute just fork the module and send a pull request, your name will be add to the developers list!  
 If you're not a develoepr but you want to help you can translate the module in different language, then your name will be in the translators list!
