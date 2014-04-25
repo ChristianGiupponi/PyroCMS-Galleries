@@ -65,14 +65,16 @@ class Galleries extends Public_Controller
 			exit;
 		}
 		
+		//Prepare the $where to use in streams query
+		$where = "`galleries_slug` = '$slug' AND `galleries_is_published`='yes'";
+				
 		//Prepare the params for the select query
 		$params = array(
 			'stream'    => 'galleries',
             'namespace' => 'galleries',
             'disable'   => 'created_by',
-            'where'     => "`galleries_slug` = '$slug'",
-            'where'		=> "`galleries_is_published`='yes'",
-		);
+            'where'     => $where,
+		);	
 		
 		//Get all the galleries
 		$gallery = $this->streams->entries->get_entries($params);
@@ -145,5 +147,31 @@ class Galleries extends Public_Controller
 			show_404();
 			exit;
 		}
+		
+		$where = "`galleries_is_published`='yes' AND `rel_galleries_category`.`galleries_categories_slug`='$category_slug'";
+		
+		//Prepare the params for the select query
+		$params = array(
+			'stream'    => 'galleries',
+            'namespace' => 'galleries',
+            'disable'   => 'created_by',
+            'where'     => $where
+		);
+		
+		//Get all the galleries
+		$galleries = $this->streams->entries->get_entries($params);
+		
+		//Get the cateory name
+		foreach( $galleries['entries'] as $gallery )
+		{
+			$category_name = $gallery['galleries_category']['galleries_categories_name'];
+			break;
+		}
+		//Render the UI
+		$this->template
+        				->title($this->module_details['name'])
+        				->set('galleries', $galleries)
+        				->set('category_name', $category_name)
+        				->build('users/category');
 	}
 }

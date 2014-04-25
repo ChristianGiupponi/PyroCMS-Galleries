@@ -1,3 +1,4 @@
+<h1><?php echo $category_name; ?></h1>
 <?php
 	
 	if( $galleries['total'] > 0 )
