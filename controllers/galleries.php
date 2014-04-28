@@ -174,4 +174,23 @@ class Galleries extends Public_Controller
         				->set('category_name', $category_name)
         				->build('users/category');
 	}
+	
+	public function categories()
+	{
+		//Prepare the params for the select query
+		$params = array(
+			'stream'    => 'galleries_categories',
+            'namespace' => 'galleries_categories',
+            'disable'   => 'created_by',
+		);
+		
+		//Get all the categories
+		$categories = $this->streams->entries->get_entries($params);
+		
+		//Render the UI
+		$this->template
+        				->title($this->module_details['name'])
+        				->set('categories', $categories)
+        				->build('users/category_list');
+	}
 }
