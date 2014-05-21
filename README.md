@@ -38,3 +38,8 @@ If you're not a develoepr but you want to help you can translate the module in d
 
 ### Bug traking
 If you find a bug pleas let me know opening a new issue here on github.
+
+### Support the project
+If you find this module useful for you or your clients, please consider donating for supporting the project and keep it alive!
+
+<a href='https://pledgie.com/campaigns/25404'><img alt='Click here to lend your support to: PyroCMS Galleries Module and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/25404.png?skin_name=chrome' border='0' ></a>
