@@ -41,7 +41,7 @@
 							<?php 
 								echo
 								      anchor('admin/galleries/create/'.$id, lang('global:edit'), 'class="btn orange"').' '.
-								      anchor('admin/galleries/confirm_delete/'.$id.'/'.$slug, lang('global:delete'), 'class="confirm btn red" title="'.lang('galleries:view:categories:index:delete:popup').'"');
+								      anchor('admin/galleries/delete/'.$id.'/'.$slug, lang('global:delete'), 'class="confirm btn red" title="'.lang('galleries:view:categories:index:delete:popup').'"');
 						    ?>						
 						</td>
 					</tr>		
