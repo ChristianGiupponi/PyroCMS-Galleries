@@ -68,7 +68,7 @@ class Plugin_galleries extends Plugin
 		
 		if( $entry['total'] > 0 )
 		{
-			return array($entry['entries']);
+			return $entry['entries'];
 		}
 		
 		return $not_found;
@@ -89,7 +89,7 @@ class Plugin_galleries extends Plugin
 		
 		if( $entry['total'] > 0 )
 		{
-			return array($entry['entries']);
+			return $entry['entries'];
 		}
 		
 		return $not_found;
