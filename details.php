@@ -9,7 +9,7 @@
  */
 class Module_Galleries extends Module 
 {
-	public $version = "1.0.1";
+	public $version = "1.0.2";
 	
 	public function __construct()
 	{
